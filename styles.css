@@ -98,6 +98,10 @@ nav {
   align-items: center;
 }
 
+a.sign-out {
+  cursor: pointer;
+}
+
 /* --------------------------------------- */
 
 /* MENÚ DESPLEGABLE */

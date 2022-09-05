@@ -16,10 +16,18 @@ const myOrderContent = document.querySelector(".my-order-content");
 
 const countCart = document.querySelector("#countCart");
 
+const signOut = document.querySelector(".sign-out");
+signOut.addEventListener("click", () => {
+
+    localStorage.setItem("userLogged", JSON.stringify([]));
+    location.replace("./index.html");
+
+});
+
 function setUserEmail() {
 
-    if (localStorage.getItem("userEmail") != null) {
-        navEmail.innerText = localStorage.getItem("userEmail");
+    if (localStorage.getItem("userLogged") != null) {
+        navEmail.innerText = JSON.parse(localStorage.getItem("userLogged")).name;
     }
 
 }

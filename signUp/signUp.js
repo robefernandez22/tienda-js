@@ -21,6 +21,6 @@ form.addEventListener("submit", (e) => {
     let users = JSON.parse(localStorage.getItem("users"));
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users));
-    location.replace("../index.html");
+    location.replace("../index.html?userCreated");
 
 });
