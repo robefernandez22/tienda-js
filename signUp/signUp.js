@@ -13,6 +13,14 @@ form.addEventListener("submit", (e) => {
         password: userPassword.value
     }
 
-    console.log(user);
+    if (localStorage.getItem("users") == null) {
+        localStorage.setItem("users", JSON.stringify([user]));
+        return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users"));
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+    location.replace("../index.html");
 
 });

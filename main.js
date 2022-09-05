@@ -1,4 +1,5 @@
 const navEmail = document.querySelector(".navbar-email");
+setUserEmail();
 const desktopMenu = document.querySelector(".desktop-menu");
 
 const navbarShoppingCart = document.querySelector(".navbar-shopping-cart");
@@ -14,6 +15,14 @@ productDetailClose.addEventListener("click", toggleProductDetail);
 const myOrderContent = document.querySelector(".my-order-content");
 
 const countCart = document.querySelector("#countCart");
+
+function setUserEmail() {
+
+    if (localStorage.getItem("userEmail") != null) {
+        navEmail.innerText = localStorage.getItem("userEmail");
+    }
+
+}
 
 function countProducts() {
 
