@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
 
     emailjs.sendForm(serviceID, templateID, form)
         .then(() => {
-            location.replace("../../emailSent/emailSent.html");
+            location.replace("./emailSent.html");
         }, (err) => {
             alert(`Ha ocurrido un error: ${err}`);
         });
